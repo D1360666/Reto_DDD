@@ -9,7 +9,15 @@ public class Descripcion implements ValueObject<String> {
     private final String descripcion;
 
     public Descripcion(String descripcion){
-        this.descripcion = descripcion;
+        try{
+            if(descripcion.equals(null)){
+                throw new IllegalArgumentException("Datos ingresados incorrectos");
+            }else{
+                this.descripcion=descripcion;
+            }
+        }catch (Exception ex){
+            throw new IllegalArgumentException(ex.getMessage());
+        }
     }
 
     @Override
@@ -18,7 +26,7 @@ public class Descripcion implements ValueObject<String> {
     }
 
     @Override
-    public boolean equals(Object o) {//(4)
+    public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Descripcion that = (Descripcion) o;
@@ -26,7 +34,7 @@ public class Descripcion implements ValueObject<String> {
     }
 
     @Override
-    public int hashCode() {//(5)
+    public int hashCode() {
         return Objects.hash(descripcion);
     }
 }

@@ -1,0 +1,27 @@
+
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+r
+Bsrc/main/java/co/com/sofka/domain/actividad/value/ActividadId.java,0\9\09e15248b550633955f25edbf8e83bcbadd6b7f1
+b
+2src/main/java/co/com/sofka/domain/coach/Coach.java,7\5\755e1ed48279c511e5366be208bb3c92ad4dd4ae
+j
+:src/main/java/co/com/sofka/domain/coach/value/CoachId.java,a\1\a1dbc559bdd91f11ee9e835efbbb91b9a512dc0f
+t
+Dsrc/main/java/co/com/sofka/domain/Generic/events/CuentaAsignada.java,a\d\ad14f2e0cb26dd4e724188dacc83d2b93cd0dc7b
+l
+<src/main/java/co/com/sofka/domain/cuenta/value/CuentaId.java,1\5\15e4c797e8d17d837a25edf6269c86ff018b6095
+y
+Isrc/main/java/co/com/sofka/domain/responsable/events/JugadorAsignado.java,f\b\fb19c4e4a612492ac36c90a606770c173d3d76ac
+s
+Csrc/main/java/co/com/sofka/domain/Generic/events/JugadorCreado.java,8\7\877fe18302078a71caa9aed42d886e62c2f6b365
+n
+>src/main/java/co/com/sofka/domain/jugador/value/JugadorId.java,6\f\6fe56804eba813d847e194b77e21f506b0c1e282
+w
+Gsrc/main/java/co/com/sofka/domain/Generic/events/NombreActualizado.java,b\1\b1bf1a7c3974f1a21ec7bf9b93cddf4073e98e53
+z
+Jsrc/main/java/co/com/sofka/domain/responsable/events/NombreModificado.java,8\0\809de6c96d08f83ec704aafc5f23cff03f270adf
+v
+Fsrc/main/java/co/com/sofka/domain/responsable/value/ResponsableId.java,5\a\5a989690bd921c05e52cba7e01d203d054801a50

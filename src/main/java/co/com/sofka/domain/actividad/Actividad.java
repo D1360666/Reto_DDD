@@ -15,11 +15,11 @@ import java.util.Map;
 
 public class Actividad extends AggregateEvent<ActividadId> {
 
-    protected CoachId coachId;
-    protected Map<JugadorId, Puntaje> participantes;
+    public CoachId coachId;
+    public Map<JugadorId, Puntaje> participantes;
     protected Fecha fecha;
     protected TipoActividad tipoActividad;
-    protected Descripcion descripcion;
+    public Descripcion descripcion;
     protected Puntaje puntaje;
 
 
@@ -38,12 +38,12 @@ public class Actividad extends AggregateEvent<ActividadId> {
         appendChange(new CoachAsignado(coachId)).apply();
     }
 
-    public void agregarJugador(ActividadId id, JugadorId jugadorId){
-        appendChange(new JugadoresAsignados(id, jugadorId)).apply();
+    public void agregarJugador(Puntaje puntaje, JugadorId jugadorId){
+        appendChange(new JugadoresAsignados(jugadorId,puntaje)).apply();
     }
 
-    public void quitarJugador(ActividadId id, JugadorId jugadorId){
-        appendChange(new JugadorQuitado(id, jugadorId)).apply();
+    public void quitarJugador(Puntaje puntaje, JugadorId jugadorId){
+        appendChange(new JugadorQuitado(puntaje, jugadorId)).apply();
     }
 
     public void actualizarDescripcion(Descripcion descripcion){

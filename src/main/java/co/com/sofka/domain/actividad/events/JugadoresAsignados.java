@@ -1,23 +1,24 @@
 package co.com.sofka.domain.actividad.events;
 
 import co.com.sofka.domain.actividad.value.ActividadId;
+import co.com.sofka.domain.actividad.value.Puntaje;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.domain.jugador.value.JugadorId;
 
 public class JugadoresAsignados extends DomainEvent {
 
-    private final ActividadId actividadId1;
+    private final Puntaje puntaje;
     private final JugadorId jugadorId1;
 
-    public JugadoresAsignados(ActividadId actividadId, JugadorId jugadorId) {
+    public JugadoresAsignados(JugadorId jugadorId, Puntaje puntaje) {
 
         super("co.com.sofka.actividad.jugadoresasignados");
-        this.actividadId1 = actividadId;
+        this.puntaje=puntaje;
         this.jugadorId1 = jugadorId;
     }
 
-    public ActividadId getActividadId1() {
-        return actividadId1;
+    public Puntaje getPuntaje() {
+        return puntaje;
     }
 
     public JugadorId getJugadorId1() {
