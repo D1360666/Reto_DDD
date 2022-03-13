@@ -23,9 +23,15 @@ public class Actividad extends AggregateEvent<ActividadId> {
     protected Puntaje puntaje;
 
 
-    public Actividad(ActividadId actividadId, Nombre nombre){
+    public Actividad(ActividadId actividadId, Descripcion descripcion){
         super(actividadId);
-        appendChange(new ActividadCreada(nombre)).apply();
+        appendChange(new ActividadCreada(descripcion)).apply();
+    }
+
+    private Actividad(ActividadId actividadId){
+        super(actividadId);
+        subscribe(new ActividadChange(this));
+
     }
 
     public void asociarCoach(CoachId coachId){
